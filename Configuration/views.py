@@ -62,8 +62,14 @@ class SinDNSQuery:
 
     def get_bytes(self):
         _domain = self.query_bytes + struct.pack('>HH', self.type, self.classify)
-        _domain = str(_domain).replace("\\t", "\\x00")
-        flag = str(_domain).split("\\x")[1][2:]
+        _flag = str(_domain).replace("\\t", "\\x00").replace("\\r", "")
+        _flag = str(_flag).split("\\x00\\x00\\x01\\x00\\x01")[0]
+        flag = ""
+        for item in _flag.split("\\x"):
+            flag += item[2:] + "."
+        flag = flag[0:-1]
+        if flag[0] == ".":
+            flag = flag[1:]
         method = "DNS-QUERY"
         status = ""
         message = {
