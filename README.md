@@ -12,7 +12,7 @@
 + 前端：基于simple-ui
 
 ```python
-sudo python3 -m pip install requirments.txt
+sudo python3 -m pip install -r requirments.txt
 sudo python3 manage.py migrate
 sudo python3 manage.py createsuperuser
 sudo python3 manage.py runserver
