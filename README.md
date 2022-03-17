@@ -62,8 +62,8 @@ sudo python3 manage.py runserver
   + 支持常用系统配置（各类token、线程数）
   + 支持用户、用户组、权限配置模块
   + 支持启动服务模块
-    + HTTP服务（支持HTTP记录）
-    + DNS服务（编写中） 
+    + HTTP服务（支持HTTP请求记录）
+    + DNS服务（支持DNS请求记录） 
 ## exp编写规范
 + 暴力破解
 ```python
