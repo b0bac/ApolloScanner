@@ -5,8 +5,8 @@ from Configuration.views import service_start, service_stop
 from Configuration.models import Configuration, Services, ServicesLog
 
 # Register your models here.
-admin.site.site_header = '长城汽车自动化攻击评估系统'  # 设置header
-admin.site.site_title = '长城汽车自动化攻击评估系统'  # 设置title
+admin.site.site_header = '阿波罗自动化攻击评估系统'  # 设置header
+admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 
 @admin.register(Configuration)
