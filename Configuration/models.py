@@ -51,6 +51,7 @@ class Services(models.Model):
     id = models.AutoField(primary_key=True, db_column="id", verbose_name='序号')
     name_choices = (
         ("1", "HTTP服务"),
+        ("2", "DNS服务")
     )
     name = models.CharField(unique=True, max_length=2, choices=name_choices, verbose_name='配置名称')
     port = models.IntegerField(db_column="port", verbose_name='端口')
