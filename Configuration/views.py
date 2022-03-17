@@ -150,8 +150,6 @@ class SinDNSServer:
     def start(self):
         host, port = "0.0.0.0", self.port
         self.server = socketserver.UDPServer((host, port), SinDNSUDPHandler)
-        print("1111")
-        print(port)
         self.server.serve_forever()
 
     def close(self):
@@ -210,9 +208,15 @@ def service_start(service_id):
 def service_stop(service_id):
     name = Services.objects.filter(id=service_id).values_list("name")[0][0]
     if name == "1":
-        if http_server:
+        try:
             http_server_stop()
+        except Exception as exception:
+            print(exception)
+            pass
     elif name == "2":
-        if dns_server:
+        try:
             dns_server_stop()
+        except Exception as exception:
+            print(exception)
+            pass
     Services.objects.filter(id=service_id).update(state=False)
