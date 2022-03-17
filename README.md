@@ -31,7 +31,9 @@ sudo python3 manage.py runserver
 + github敏感信息收集
   + 基于域名和关键字的敏感信息收集（需要github-token）
 
-+ 敏感路径探测（编写中）
++ 敏感路径探测
+  + 探测任务
+  + 探测结果  
 + 暴力破解（基于exp的暴力破解）
   + exp注册模块
     + 代码动态编辑
