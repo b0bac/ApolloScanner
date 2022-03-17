@@ -10,6 +10,7 @@
 + masscan：需要
 + mysql
 + 前端：基于simple-ui
++ 测试操作系统：MacOS Monterey 12.3
 
 ```python
 sudo python3 -m pip install -r requirments.txt
@@ -30,10 +31,7 @@ sudo python3 manage.py runserver
 
 + github敏感信息收集
   + 基于域名和关键字的敏感信息收集（需要github-token）
-
-+ 敏感路径探测
-  + 探测任务
-  + 探测结果  
+  + 
 + 暴力破解（基于exp的暴力破解）
   + exp注册模块
     + 代码动态编辑
@@ -47,6 +45,9 @@ sudo python3 manage.py runserver
   + 破解结果模块
     + 支持结果显示
     + 支持钉钉通知
+  + 敏感路径探测任务
+  + 敏感路径探测结果  
+  
 + 漏洞扫描模块
   + exp注册模块 
     + 代码动态编辑
@@ -60,12 +61,14 @@ sudo python3 manage.py runserver
   + 结果显示模块
     + 支持结果显示
     + 支持钉钉通知
+   
 + 配置模块
   + 支持常用系统配置（各类token、线程数）
   + 支持用户、用户组、权限配置模块
   + 支持启动服务模块
     + HTTP服务（支持HTTP请求记录）
     + DNS服务（支持DNS请求记录） 
+
 ## exp编写规范
 + 暴力破解
 ```python
