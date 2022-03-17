@@ -1,0 +1,6 @@
+robots.txt
+.htaccess
+.bash_history
+bak.zip
+web.xml
+

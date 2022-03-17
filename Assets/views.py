@@ -12,6 +12,7 @@ from Assets.models import AssetList, AssetTask
 from Configuration.models import Configuration
 from Assets.wappalyzer import Wappalyzer, WebPage
 urllib3.disable_warnings(urllib3.exceptions.InsecurePlatformWarning)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class AssetsScanner(object):

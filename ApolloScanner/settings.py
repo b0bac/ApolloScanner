@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'Assets',
     'Configuration',
     'GithubScan',
+    'PathScan',
     'BruteScan',
     'VulnerableScan',
     'simpleui',
@@ -227,6 +228,16 @@ SIMPLEUI_CONFIG = {
                     'name': '暴破结果',
                     'url': 'BruteScan/bruteresult',
                     'icon': 'fa fa-server'
+                },
+                {
+                    'name': '路径暴破',
+                    'url': 'PathScan/pathscantask',
+                    'icon': 'fa fa-road'
+                },
+                {
+                    'name': '敏感路径',
+                    'url': 'PathScan/pathscanresult',
+                    'icon': 'fa fa-bars'
                 },
             ]
         },
