@@ -132,7 +132,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SIMPLEUI_LOGO = 'https://img1.baidu.com/it/u=3497474924,1672233131&fm=253&fmt=auto&app=138&f=JPEG?w=250&h=250'
 
 SIMPLEUI_CONFIG = {
     # 是否使用系统默认菜单，自定义菜单时建议关闭。
