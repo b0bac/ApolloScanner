@@ -61,3 +61,22 @@ sudo python3 manage.py runserver
   + 支持启动服务模块
     + HTTP服务（支持HTTP记录）
     + DNS服务（编写中） 
+## exp编写规范
++ 暴力破解
+```python
+def brute_scan_function_name(ipaddress, port, username, password, logger):  
+    import xx_module # 引入模块全部在函数内容写
+    # ... 
+    # ...是爆破exp核心代码
+    logger.log("xxxxx") # 代替print
+    return True  # 返回必须是true/false
+```
++ 漏扫扫描
+```python
+def brute_scan_function_name(ipaddress, port, logger):  
+    import xx_module # 引入模块全部在函数内容写
+    # ... 
+    # ...是漏扫exp核心代码
+    logger.log("xxxxx") # 代替print
+    return True  # 返回必须是true/false
+```
