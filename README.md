@@ -9,6 +9,7 @@
 + nmap：需要
 + masscan：需要
 + mysql
++ 前端：基于simple-ui
 
 ```python
 sudo python3 -m pip install requirments.txt
