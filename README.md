@@ -5,7 +5,7 @@
 
 ## 安装
 + python版本： 3.8.x 或 3.9.x
-+ django版本：4.1
++ django版本：4.0.1
 + nmap：需要
 + masscan：需要
 + mysql
