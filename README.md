@@ -10,7 +10,7 @@
 + masscan：需要
 + mysql
 + 前端：基于simple-ui
-+ 测试操作系统：MacOS Monterey 12.3
++ 支持操作系统：MacOS Monterey 12.3 / Ubuntu 18.04 LTS
 
 ```python
 sudo python3 -m pip install -r requirments.txt
