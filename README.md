@@ -119,4 +119,4 @@ error: metadata-generation-failed
 ╰─> See above for output.
 ```
 + 解析：由于部分环境缺乏mysql_config命令导致mysqlclient依赖安装失败，可能是由于没有安装该命令或者没有建立该命令的软连接，可根据自己环境google解决。
-+ 参看文献 : ![解决Mysql中mysql_config not found的方法](https://www.cnblogs.com/alice-bj/articles/9512426.html)
++ 参看文献 : [解决Mysql中mysql_config not found的方法](https://www.cnblogs.com/alice-bj/articles/9512426.html)
