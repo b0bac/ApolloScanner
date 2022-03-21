@@ -88,3 +88,34 @@ def brute_scan_function_name(ipaddress, port, logger):
     logger.log("xxxxx") # 代替print
     return True  # 返回必须是true/false
 ```
+
+## 报错解答
+### 1、缺乏mysql_config命令：
++ 报错示例
+```
+Preparing metadata (setup.py) ... error
+error: subprocess-exited-with-error
+
+× python setup.py egg_info did not run successfully.
+│ exit code: 1
+╰─> [11 lines of output]
+/bin/sh: 1: mysql_config: not found
+Traceback (most recent call last):
+File "", line 2, in
+File "", line 34, in
+File "/tmp/pip-install-2er683ou/mysqlclient_5ba8560cf6ca429b8316cf1cf6771c9a/setup.py", line 16, in
+metadata, options = get_config()
+File "/tmp/pip-install-2er683ou/mysqlclient_5ba8560cf6ca429b8316cf1cf6771c9a/setup_posix.py", line 51, in get_config
+libs = mysql_config("libs")
+File "/tmp/pip-install-2er683ou/mysqlclient_5ba8560cf6ca429b8316cf1cf6771c9a/setup_posix.py", line 29, in mysql_config
+raise EnvironmentError("%s not found" % (_mysql_config_path,))
+OSError: mysql_config not found
+[end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+```
++ 解析：由于部分环境缺乏mysql_config命令导致mysqlclient依赖安装失败，可能是由于没有安装该命令或者没有建立该命令的软连接，可根据自己环境google解决。
