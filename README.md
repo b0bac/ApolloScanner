@@ -32,6 +32,8 @@ ifconfig -a
 ifconfig ens33 down
 ifconfig ens33 up
 ```
+![图片](https://user-images.githubusercontent.com/11972644/159934652-5fef3ec7-cec9-4385-8caa-3cf8a54caf6a.png)
+
 **源码安装**
 + python版本： 3.8.x 或 3.9.x
 + django版本：4.0.1
