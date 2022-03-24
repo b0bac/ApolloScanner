@@ -1,7 +1,9 @@
 # 通知
 **由于两位开发者处于生病或工作忙碌状态的情况，ApolloScanner将在短期内暂停更新和修复BUG，预计清明节后继续。**
 
-**请因缺少依赖库、依赖库版本不对、缺少组件、数据库账号口令与配置文件不同等引发的报错的使用者，先自行Google，后续将不再回复此类ISSUE。**
+**请因缺少依赖库、依赖库版本不对、缺少组件、数据库账号口令与配置文件不同等引发的报错的使用者，先自行Google解决。**
+
+**对于没有兴趣自己解决环境报错的小伙伴们，这里提供了虚拟机文件可直接下载导入运行。**
 # ApolloScanner
 自动化巡航扫描框架（可用于红队打点评估）
 ![图片](https://user-images.githubusercontent.com/11972644/158723361-8356e64d-55fa-40df-a39c-2b52561726ab.png)
@@ -14,6 +16,10 @@
 + 连接地址百度网盘 
 + 链接: https://pan.baidu.com/s/164TUtMLqv8yyxfrse5VR2g 
 + 提取码: s5ti 
++ 格式：
+  + ova 适用于virtual box
+  + ovf（zip压缩包）适用于 vmware workstations 和 vmware fusion
++ 使用简便  
 ```bash
 cd ~/ApolloScanner
 sudo python3.8 manage.py runserver 0.0.0.0:8080
