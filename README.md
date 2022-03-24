@@ -12,6 +12,8 @@
 + 系统账号: apollo/apollo
 + web访问账号: apollo/apollo
 + 连接地址百度网盘 
++ 链接: https://pan.baidu.com/s/164TUtMLqv8yyxfrse5VR2g 
++ 提取码: s5ti 
 ```bash
 cd ~/ApolloScanner
 sudo python3.8 manage.py runserver 0.0.0.0:8080
