@@ -1,3 +1,6 @@
+# 通知
+**由于两位开发者处于生病或工作忙碌状态的情况，ApolloScanner将在短期内暂停更新和修复BUG，预计清明节后继续。**
+**请因缺少依赖库、依赖库版本不对、缺少组件、数据库账号口令与配置文件不同等引发的报错，先自行Google，后续将不再回复此类ISSUE。**
 # ApolloScanner
 自动化巡航扫描框架（可用于红队打点评估）
 ![图片](https://user-images.githubusercontent.com/11972644/158723361-8356e64d-55fa-40df-a39c-2b52561726ab.png)
@@ -119,4 +122,11 @@ error: metadata-generation-failed
 ╰─> See above for output.
 ```
 + 解析：由于部分环境缺乏mysql_config命令导致mysqlclient依赖安装失败，可能是由于没有安装该命令或者没有建立该命令的软连接，可根据自己环境google解决。
-+ 参看文献 : [解决Mysql中mysql_config not found的方法](https://www.cnblogs.com/alice-bj/articles/9512426.html)
++ 参考文献 : [解决Mysql中mysql_config not found的方法](https://www.cnblogs.com/alice-bj/articles/9512426.html)
+
+### 关于一些异常简单的报错的解答：
+**目前看到一些ISSUE报错的原因是以下几种情况：**
++ 自己环境mysql账号密码与配置文件不匹配
++ 缺少相关依赖Python库或版本不对
++ 缺少相关依赖的组件或版本不对
+**此类问题请自行Google解决，不要提ISSUE**
