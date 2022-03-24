@@ -9,11 +9,21 @@
 
 ## 安装
 **提供了虚拟机版本**
-+ 系统默认IP地址:172.16.125.128
 + 系统账号: apollo/apollo
 + web访问账号: apollo/apollo
-+ 默认服务端口：8080
-
++ 连接地址百度网盘 
+```bash
+cd ~/ApolloScanner
+sudo python3.8 manage.py runserver 0.0.0.0:8080
+```
++ 虚拟机迁移可能导致的网络问题
+```bash
+ifconfig -a 
+# 查看所有网卡，假设网卡为ens33
+# 调整为NAT模式
+ifconfig ens33 down
+ifconfig ens33 up
+```
 **源码安装**
 + python版本： 3.8.x 或 3.9.x
 + django版本：4.0.1
