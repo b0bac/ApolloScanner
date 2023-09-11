@@ -46,7 +46,7 @@ sudo ifconfig ens33 up
 ```python
 sudo apt install masscan nmap libmysqlclient-dev mysql-server
 sudo python3 -m pip install -r requirments.txt
-# 修改mysql root密码 并修改settings.py 中的数据库账密
+# 需要手动修改mysql root密码 创建Apollo 数据库 并修改settings.py 中的数据库账密
 sudo python3 manage.py migrate
 sudo python3 manage.py createsuperuser
 sudo python3 manage.py runserver 0.0.0.0:80
