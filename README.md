@@ -26,11 +26,11 @@ sudo python3.8 manage.py runserver 0.0.0.0:8080
 ```
 + 虚拟机迁移可能导致的网络问题
 ```bash
-ifconfig -a 
+sudo ifconfig -a 
 # 查看所有网卡，假设网卡为ens33
 # 调整为NAT模式
-ifconfig ens33 down
-ifconfig ens33 up
+sudo ifconfig ens33 down
+sudo ifconfig ens33 up
 ```
 ![图片](https://user-images.githubusercontent.com/11972644/159934652-5fef3ec7-cec9-4385-8caa-3cf8a54caf6a.png)
 
