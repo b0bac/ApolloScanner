@@ -64,7 +64,9 @@ class AssetsScanner(object):
         self.result["top_level_domain"] = top_level_domain
         self.parameters['domain'] = top_level_domain
         try:
-            response = urllib.request.urlopen('%s?%s' % (self.api_url, urllib.parse.urlencode(self.parameters))).read()
+            import ssl
+            context = ssl._create_unverified_context()
+            response = urllib.request.urlopen('%s?%s' % (self.api_url, urllib.parse.urlencode(self.parameters)), context=context).read()
             subdomain_list = json.loads(response)
             subdomain_list = subdomain_list["subdomains"]
         except Exception as exception:
