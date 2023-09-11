@@ -36,6 +36,7 @@ keyring==18.0.1
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
+lxml==4.9.3
 MarkupSafe==1.1.0
 more-itertools==4.2.0
 multidict==6.0.2
