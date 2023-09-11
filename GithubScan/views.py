@@ -1,5 +1,6 @@
 import time
 import github
+from github import Github
 from Configuration.models import Configuration
 from GithubScan.models import GithubScanTask, GithubScanResult
 
@@ -16,7 +17,7 @@ class GithubScanner(object):
 
     def login(self):
         try:
-            self.scanner = github.Github(login_or_token=self.token)
+            self.scanner = Github(login_or_token=self.token)
         except Exception as exception:
             print(exception)
 
