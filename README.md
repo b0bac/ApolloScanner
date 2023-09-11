@@ -44,10 +44,12 @@ ifconfig ens33 up
 + 支持操作系统：MacOS Monterey 12.3 / Ubuntu 18.04 LTS
 
 ```python
+sudo apt install masscan nmap libmysqlclient-dev mysql-server
 sudo python3 -m pip install -r requirments.txt
+# 修改mysql root密码 并修改settings.py 中的数据库账密
 sudo python3 manage.py migrate
 sudo python3 manage.py createsuperuser
-sudo python3 manage.py runserver
+sudo python3 manage.py runserver 0.0.0.0:80
 ```
 
 ## 功能
