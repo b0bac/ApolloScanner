@@ -13,10 +13,10 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 @admin.register(AssetTask)
 class AssetTaskAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'top_level_domain', 'port_scan_type', 'timestamp', 'change']
+    list_display = ['name', 'top_level_domain', 'port_scan_type', 'timestamp', 'change']
     list_filter = ['top_level_domain', 'timestamp']
     search_fields = ['name', 'top_level_domain']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
@@ -57,7 +57,7 @@ class AssetListAdmin(admin.ModelAdmin):
                    'middle_ware', 'timestamp']
     search_fields = ['ip_address', 'top_level_domain', 'subdomain', 'cname', 'system', 'port', 'state', 'protocol',
                      'service', 'software', 'middle_ware']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
