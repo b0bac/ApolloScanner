@@ -11,10 +11,10 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 @admin.register(PathScanTask)
 class PathScanTaskAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'target', 'timestamp', 'change']
+    list_display = ['name', 'target', 'timestamp', 'change']
     list_filter = []
     search_fields = ['name']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
@@ -42,10 +42,10 @@ class PathScanTaskAdmin(admin.ModelAdmin):
 
 @admin.register(PathScanResult)
 class PathScanResultAdmin(admin.ModelAdmin):
-    list_display = ['id', 'url', 'timestamp', 'change']
+    list_display = ['url', 'timestamp', 'change']
     list_filter = []
     search_fields = ['name']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     def has_add_permission(self, request):
