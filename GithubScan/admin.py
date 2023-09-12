@@ -12,10 +12,10 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 @admin.register(GithubScanTask)
 class GithubScanTaskAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'keyword', 'domain', 'timestamp', 'change']
+    list_display = ['name', 'keyword', 'domain', 'timestamp', 'change']
     list_filter = []
     search_fields = ['name', 'keyword', 'domain']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
@@ -48,10 +48,10 @@ class GithubScanTaskAdmin(admin.ModelAdmin):
 
 @admin.register(GithubScanResult)
 class GithubScanResultAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'keyword', 'domain', 'url', 'timestamp', 'change']
+    list_display = ['name', 'keyword', 'domain', 'url', 'timestamp', 'change']
     list_filter = ['keyword', 'domain']
     search_fields = ['name', 'keyword', 'domain']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     def has_add_permission(self, request):
