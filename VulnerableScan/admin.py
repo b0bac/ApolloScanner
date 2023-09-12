@@ -13,10 +13,10 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 @admin.register(ExploitRegister)
 class ExploitRegisterAdmin(admin.ModelAdmin):
-    list_display = ['id', 'exploit_name', 'category', 'code', 'debug_info', 'timestamp', 'change']
+    list_display = ['exploit_name', 'category', 'code', 'debug_info', 'timestamp', 'change']
     list_filter = ['category']
     search_fields = ['name']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
@@ -43,10 +43,10 @@ class ExploitRegisterAdmin(admin.ModelAdmin):
 
 @admin.register(VulnerableScanTasks)
 class VulnerableScanTasksAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'target', 'exploit', 'change']
+    list_display = ['name', 'target', 'exploit', 'change']
     list_filter = ['target', 'exploit']
     search_fields = ['name']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     @transaction.atomic
@@ -80,10 +80,10 @@ class VulnerableScanTasksAdmin(admin.ModelAdmin):
 
 @admin.register(VulnerableScanResult)
 class VulnerableScanResultAdmin(admin.ModelAdmin):
-    list_display = ['id', 'task_id', 'task_name', 'ip_address', 'port', 'result_flag', 'timestamp', 'detail']
+    list_display = ['task_id', 'task_name', 'ip_address', 'port', 'result_flag', 'timestamp', 'detail']
     list_filter = ['result_flag', 'timestamp']
     search_fields = ['task_name', 'timestamp']
-    ordering = ["id"]
+    ordering = ["-id"]
     date_hierarchy = 'timestamp'
 
     def has_add_permission(self, request):
