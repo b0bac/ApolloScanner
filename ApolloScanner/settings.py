@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'PathScan',
     'BruteScan',
     'VulnerableScan',
+    'VulnerabilityMonitor',
     'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +142,7 @@ SIMPLEUI_CONFIG = {
 
     # 用于菜单排序和过滤, 不填此字段为默认排序和全部显示。空列表[] 为全部不显示.
     # 'menu_display': ['资产管理', '扫描任务', '负载管理', '信息收集', '用户管理', '系统配置'],
-    'menu_display': ['资产扫描管理', 'Github信息收集', '暴力破解验证', '漏洞扫描验证', '系统配置管理'],
+    'menu_display': ['资产扫描管理', 'Github信息收集', '暴力破解验证', '漏洞扫描验证', '漏洞监控预警', '系统配置管理'],
 
     # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时刷新展示菜单内容。
     # 一般建议关闭。
@@ -242,6 +244,22 @@ SIMPLEUI_CONFIG = {
             ]
         },
         {
+            'name': '漏洞监控预警',
+            'icon': 'fa fa-th-list',
+            'models': [
+                {
+                    'name': '监控任务',
+                    'url': 'VulnerabilityMonitor/vulnerabilitymonitortask',
+                    'icon': 'fa fa-tasks'
+                },
+                {
+                    'name': '预警列表',
+                    'url': 'VulnerabilityMonitor/vulnerbilitymonitorresult',
+                    'icon': 'fa fa-desktop'
+                },
+            ]
+        },
+        {
             'name': '漏洞扫描验证',
             'icon': 'fa fa-rocket',
             'models': [
@@ -265,3 +283,6 @@ SIMPLEUI_CONFIG = {
 
     ]
 }
+CRONJOBS = [
+    ('30 9 * * *', 'VulnerabilityMonitor.views.start', ' >> /root/mlog/Monitor.log'), # 注意：/tmp/base_api 目录要手动创建
+]
