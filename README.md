@@ -1,6 +1,7 @@
 # 最新更新
 ## 2023.09.14 
 + 增加新功能，可以支持根据关键字监控Github上面新的漏洞POC/EXP
+<img width="1432" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/367eea48-edf1-4130-89a4-7796efb3ba8f">
 
 ## 2023.09.12 
 + 优化显示逻辑
