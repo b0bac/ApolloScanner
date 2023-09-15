@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_crontab',
+    'django_extensions',
+    'werkzeug_debugger_runserver',
 ]
 
 MIDDLEWARE = [
