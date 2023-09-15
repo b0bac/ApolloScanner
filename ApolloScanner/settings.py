@@ -285,6 +285,6 @@ SIMPLEUI_CONFIG = {
 
     ]
 }
-CRONJOBS = [
-    ('30 9 * * *', 'VulnerabilityMonitor.views.start', ' >> /root/mlog/Monitor.log'), # 注意：/tmp/base_api 目录要手动创建
+CRONJOBS = [ # 注意：/tmp/base_api 目录要手动创建
+    ('30 17 * * *', 'VulnerabilityMonitor.views.start', ' >> /root/mlog/Monitor.log'),
 ]
