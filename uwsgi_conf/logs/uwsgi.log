@@ -1,0 +1,381 @@
+*** Starting uWSGI 2.0.22 (64bit) on [Tue Sep 19 14:46:35 2023] ***
+compiled with version: 11.4.0 on 15 September 2023 02:22:15
+os: Linux-5.15.0-83-generic #92-Ubuntu SMP Mon Aug 14 09:30:42 UTC 2023
+nodename: ecs-299104
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/SecGithubProject/ApolloScanner
+writing pidfile to /root/SecGithubProject/ApolloScanner/uwsgi_conf/pid/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/SecGithubProject/ApolloScanner
+your processes number limit is 14425
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+building mime-types dictionary from file /etc/mime.types...1516 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8443 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38689 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Python main interpreter initialized at 0x55a0032955e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208576 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a0032955e0 pid: 177762 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 177762)
+spawned uWSGI worker 1 (pid: 177763, cores: 4)
+spawned uWSGI http 1 (pid: 177768)
+Python auto-reloader enabled
+[pid: 177763|app: 0|req: 1/1] 220.181.41.14 () {56 vars in 1145 bytes} [Tue Sep 19 14:46:42 2023] GET / => generated 0 bytes in 57 msecs (HTTP/1.1 302) 9 headers in 343 bytes (1 switches on core 0)
+[pid: 177763|app: 0|req: 2/2] 220.181.41.14 () {56 vars in 1182 bytes} [Tue Sep 19 14:46:42 2023] GET /admin/login/?next=/ => generated 4051 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 2)
+[pid: 177763|app: -1|req: -1/3] 220.181.41.14 () {52 vars in 1131 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 1)
+[pid: 177763|app: -1|req: -1/4] 220.181.41.14 () {52 vars in 1109 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 3)
+[pid: 177763|app: -1|req: -1/5] 220.181.41.14 () {52 vars in 1084 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 0)
+[pid: 177763|app: -1|req: -1/6] 220.181.41.14 () {52 vars in 1080 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 2)
+[pid: 177763|app: -1|req: -1/7] 220.181.41.14 () {52 vars in 1066 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 3)
+[pid: 177763|app: -1|req: -1/8] 220.181.41.14 () {52 vars in 1090 bytes} [Tue Sep 19 14:46:42 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 1)
+[pid: 177763|app: -1|req: -1/9] 220.181.41.14 () {52 vars in 1065 bytes} [Tue Sep 19 14:46:43 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 0)
+[pid: 177763|app: -1|req: -1/10] 220.181.41.14 () {52 vars in 1077 bytes} [Tue Sep 19 14:46:43 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 2)
+[pid: 177763|app: -1|req: -1/11] 220.181.41.14 () {52 vars in 1117 bytes} [Tue Sep 19 14:46:43 2023] GET /static/admin/simpleui-x/img/logo.png => generated 124242 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 3)
+[pid: 177763|app: -1|req: -1/12] 220.181.41.14 () {52 vars in 1113 bytes} [Tue Sep 19 14:46:43 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 1)
+[pid: 177763|app: -1|req: -1/13] 220.181.41.14 () {54 vars in 1221 bytes} [Tue Sep 19 14:46:43 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 0)
+[pid: 177763|app: 0|req: 3/14] 220.181.41.14 () {52 vars in 1067 bytes} [Tue Sep 19 14:46:45 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 2)
+[pid: 177763|app: 0|req: 4/15] 220.181.41.14 () {52 vars in 1104 bytes} [Tue Sep 19 14:46:45 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 3)
+[pid: 177763|app: 0|req: 5/16] 220.181.41.14 () {56 vars in 1182 bytes} [Tue Sep 19 14:49:39 2023] GET /admin/login/?next=/ => generated 4051 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 1)
+[pid: 177763|app: -1|req: -1/17] 220.181.41.14 () {52 vars in 1109 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 0)
+[pid: 177763|app: -1|req: -1/18] 220.181.41.14 () {52 vars in 1084 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 2)
+[pid: 177763|app: -1|req: -1/19] 220.181.41.14 () {52 vars in 1131 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 3)
+[pid: 177763|app: -1|req: -1/20] 220.181.41.14 () {52 vars in 1080 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 1)
+[pid: 177763|app: -1|req: -1/21] 220.181.41.14 () {52 vars in 1090 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 0)
+[pid: 177763|app: -1|req: -1/22] 220.181.41.14 () {52 vars in 1066 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 2)
+[pid: 177763|app: -1|req: -1/23] 220.181.41.14 () {52 vars in 1113 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 3)
+[pid: 177763|app: -1|req: -1/24] 220.181.41.14 () {52 vars in 1077 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 1)
+[pid: 177763|app: -1|req: -1/25] 220.181.41.14 () {52 vars in 1117 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 0)
+[pid: 177763|app: -1|req: -1/26] 220.181.41.14 () {52 vars in 1065 bytes} [Tue Sep 19 14:49:39 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 2)
+[pid: 177763|app: -1|req: -1/27] 220.181.41.14 () {54 vars in 1221 bytes} [Tue Sep 19 14:49:40 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 3)
+[pid: 177763|app: 0|req: 6/28] 220.181.41.14 () {52 vars in 1067 bytes} [Tue Sep 19 14:49:42 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 1)
+[pid: 177763|app: 0|req: 7/29] 220.181.41.14 () {52 vars in 1104 bytes} [Tue Sep 19 14:49:42 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 177768)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+*** Starting uWSGI 2.0.22 (64bit) on [Tue Sep 19 14:53:16 2023] ***
+compiled with version: 11.4.0 on 15 September 2023 02:22:15
+os: Linux-5.15.0-83-generic #92-Ubuntu SMP Mon Aug 14 09:30:42 UTC 2023
+nodename: ecs-299104
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/SecGithubProject/ApolloScanner
+writing pidfile to /root/SecGithubProject/ApolloScanner/uwsgi_conf/pid/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/SecGithubProject/ApolloScanner
+your processes number limit is 14425
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+building mime-types dictionary from file /etc/mime.types...1516 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8443 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:36679 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Python main interpreter initialized at 0x55c3bc4827d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208576 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c3bc4827d0 pid: 177991 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 177991)
+spawned uWSGI worker 1 (pid: 177992, cores: 4)
+spawned uWSGI http 1 (pid: 177997)
+Python auto-reloader enabled
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 177997)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+*** Starting uWSGI 2.0.22 (64bit) on [Tue Sep 19 15:22:48 2023] ***
+compiled with version: 11.4.0 on 15 September 2023 02:22:15
+os: Linux-5.15.0-83-generic #92-Ubuntu SMP Mon Aug 14 09:30:42 UTC 2023
+nodename: ecs-299104
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/SecGithubProject/ApolloScanner
+writing pidfile to /root/SecGithubProject/ApolloScanner/uwsgi_conf/pid/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/SecGithubProject/ApolloScanner
+your processes number limit is 14425
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+building mime-types dictionary from file /etc/mime.types...1516 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8443 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:45625 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Python main interpreter initialized at 0x559cf8371bb0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208576 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x559cf8371bb0 pid: 178965 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 178965)
+spawned uWSGI worker 1 (pid: 178966, cores: 4)
+spawned uWSGI http 1 (pid: 178971)
+Python auto-reloader enabled
+[pid: 178966|app: 0|req: 1/1] 127.0.0.1 () {28 vars in 292 bytes} [Tue Sep 19 15:26:49 2023] GET / => generated 0 bytes in 53 msecs (HTTP/1.1 302) 9 headers in 343 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 178971)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+*** Starting uWSGI 2.0.22 (64bit) on [Tue Sep 19 15:32:39 2023] ***
+compiled with version: 11.4.0 on 15 September 2023 02:22:15
+os: Linux-5.15.0-83-generic #92-Ubuntu SMP Mon Aug 14 09:30:42 UTC 2023
+nodename: ecs-299104
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/SecGithubProject/ApolloScanner
+writing pidfile to /root/SecGithubProject/ApolloScanner/uwsgi_conf/pid/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/SecGithubProject/ApolloScanner
+your processes number limit is 14425
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+building mime-types dictionary from file /etc/mime.types...1516 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8443 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Python main interpreter initialized at 0x55fb170abac0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208576 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55fb170abac0 pid: 179083 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 179083)
+spawned uWSGI worker 1 (pid: 179084, cores: 4)
+Python auto-reloader enabled
+[pid: 179084|app: 0|req: 1/1] 220.181.41.14 () {58 vars in 1174 bytes} [Tue Sep 19 15:32:48 2023] GET / => generated 0 bytes in 53 msecs (HTTP/1.1 302) 9 headers in 343 bytes (1 switches on core 0)
+[pid: 179084|app: 0|req: 2/2] 220.181.41.14 () {58 vars in 1211 bytes} [Tue Sep 19 15:32:48 2023] GET /admin/login/?next=/ => generated 4051 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 3)
+[pid: 179084|app: -1|req: -1/3] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/4] 220.181.41.14 () {56 vars in 1144 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/5] 220.181.41.14 () {56 vars in 1191 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/6] 220.181.41.14 () {56 vars in 1140 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/7] 220.181.41.14 () {56 vars in 1150 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/8] 220.181.41.14 () {56 vars in 1126 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/9] 220.181.41.14 () {56 vars in 1137 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/10] 220.181.41.14 () {56 vars in 1125 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/11] 220.181.41.14 () {56 vars in 1177 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/12] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/13] 220.181.41.14 () {58 vars in 1281 bytes} [Tue Sep 19 15:32:49 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 0)
+[pid: 179084|app: 0|req: 3/14] 220.181.41.14 () {56 vars in 1127 bytes} [Tue Sep 19 15:32:50 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 3)
+[pid: 179084|app: 0|req: 4/15] 220.181.41.14 () {56 vars in 1164 bytes} [Tue Sep 19 15:32:50 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 2)
+[pid: 179084|app: 0|req: 5/16] 220.181.41.14 () {58 vars in 1174 bytes} [Tue Sep 19 15:37:46 2023] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 343 bytes (1 switches on core 1)
+[pid: 179084|app: 0|req: 6/17] 220.181.41.14 () {58 vars in 1211 bytes} [Tue Sep 19 15:37:46 2023] GET /admin/login/?next=/ => generated 4051 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 0)
+[pid: 179084|app: -1|req: -1/18] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/19] 220.181.41.14 () {56 vars in 1191 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/20] 220.181.41.14 () {56 vars in 1144 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/21] 220.181.41.14 () {56 vars in 1140 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/22] 220.181.41.14 () {56 vars in 1150 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/23] 220.181.41.14 () {56 vars in 1126 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/24] 220.181.41.14 () {56 vars in 1137 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/25] 220.181.41.14 () {56 vars in 1177 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/26] 220.181.41.14 () {56 vars in 1125 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/27] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/28] 220.181.41.14 () {58 vars in 1281 bytes} [Tue Sep 19 15:37:46 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 1)
+[pid: 179084|app: 0|req: 7/29] 220.181.41.14 () {56 vars in 1127 bytes} [Tue Sep 19 15:37:47 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 0)
+[pid: 179084|app: 0|req: 8/30] 220.181.41.14 () {56 vars in 1164 bytes} [Tue Sep 19 15:37:47 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 3)
+[pid: 179084|app: 0|req: 9/31] 220.181.41.14 () {58 vars in 1174 bytes} [Tue Sep 19 17:26:09 2023] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 343 bytes (1 switches on core 2)
+[pid: 179084|app: 0|req: 10/32] 220.181.41.14 () {58 vars in 1211 bytes} [Tue Sep 19 17:26:09 2023] GET /admin/login/?next=/ => generated 4051 bytes in 5 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 1)
+[pid: 179084|app: -1|req: -1/33] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/34] 220.181.41.14 () {56 vars in 1191 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/35] 220.181.41.14 () {56 vars in 1144 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/36] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/37] 220.181.41.14 () {56 vars in 1140 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/38] 220.181.41.14 () {56 vars in 1150 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/39] 220.181.41.14 () {56 vars in 1126 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/40] 220.181.41.14 () {56 vars in 1137 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/41] 220.181.41.14 () {56 vars in 1125 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/42] 220.181.41.14 () {56 vars in 1177 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/43] 220.181.41.14 () {58 vars in 1281 bytes} [Tue Sep 19 17:26:10 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 2)
+[pid: 179084|app: 0|req: 11/44] 220.181.41.14 () {56 vars in 1127 bytes} [Tue Sep 19 17:26:12 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 1)
+[pid: 179084|app: 0|req: 12/45] 220.181.41.14 () {56 vars in 1164 bytes} [Tue Sep 19 17:26:12 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 0)
+[pid: 179084|app: -1|req: -1/46] 220.181.41.14 () {58 vars in 1254 bytes} [Tue Sep 19 17:26:18 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff => generated 28200 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 3)
+[pid: 179084|app: 0|req: 13/47] 220.181.41.14 () {68 vars in 1463 bytes} [Tue Sep 19 17:26:23 2023] POST /admin/login/?next=/ => generated 4294 bytes in 101 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 2)
+[pid: 179084|app: -1|req: -1/48] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/49] 220.181.41.14 () {56 vars in 1191 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/50] 220.181.41.14 () {56 vars in 1144 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/css/login.css?_=2.1 => generated 500 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/51] 220.181.41.14 () {56 vars in 1140 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/52] 220.181.41.14 () {56 vars in 1150 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/53] 220.181.41.14 () {56 vars in 1126 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/js/login.js?_=3.3 => generated 669 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/54] 220.181.41.14 () {56 vars in 1137 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/particles/particles.js => generated 51264 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/55] 220.181.41.14 () {56 vars in 1125 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/particles/app.js => generated 3728 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/56] 220.181.41.14 () {56 vars in 1177 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/57] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 17:26:23 2023] GET /static/admin/simpleui-x/img/bg.svg => generated 9547 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 116 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/58] 220.181.41.14 () {58 vars in 1254 bytes} [Tue Sep 19 17:26:27 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff => generated 28200 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/59] 220.181.41.14 () {58 vars in 1281 bytes} [Tue Sep 19 17:26:27 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 2)
+[pid: 179084|app: 0|req: 14/60] 220.181.41.14 () {56 vars in 1127 bytes} [Tue Sep 19 17:26:27 2023] GET /favicon.ico => generated 0 bytes in 1 msecs (HTTP/1.1 302) 9 headers in 354 bytes (1 switches on core 1)
+[pid: 179084|app: 0|req: 15/61] 220.181.41.14 () {56 vars in 1164 bytes} [Tue Sep 19 17:26:27 2023] GET /admin/login/?next=/favicon.ico => generated 4073 bytes in 4 msecs (HTTP/1.1 200) 9 headers in 479 bytes (1 switches on core 0)
+[pid: 179084|app: 0|req: 16/62] 220.181.41.14 () {68 vars in 1463 bytes} [Tue Sep 19 17:26:38 2023] POST /admin/login/?next=/ => generated 0 bytes in 112 msecs (HTTP/1.1 302) 11 headers in 637 bytes (1 switches on core 3)
+[pid: 179084|app: 0|req: 17/63] 220.181.41.14 () {62 vars in 1315 bytes} [Tue Sep 19 17:26:39 2023] GET / => generated 24246 bytes in 28 msecs (HTTP/1.1 200) 9 headers in 457 bytes (1 switches on core 2)
+[pid: 179084|app: -1|req: -1/64] 220.181.41.14 () {56 vars in 1194 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/65] 220.181.41.14 () {56 vars in 1216 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/66] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/css/index.css?_=3.2 => generated 6608 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/67] 220.181.41.14 () {56 vars in 1165 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/68] 220.181.41.14 () {56 vars in 1181 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 => generated 3861 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/69] 220.181.41.14 () {56 vars in 1175 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/70] 220.181.41.14 () {56 vars in 1175 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/automatic/dicts.js?_=2022.3.1 => generated 6292 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/71] 220.181.41.14 () {56 vars in 1179 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/automatic/segment.js?_=2022.3.1 => generated 1186 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/72] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/locale/en-us.js?_=2022.3.1 => generated 811 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/73] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/locale/zh-hans.js?_=2022.3.1 => generated 1254 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/74] 220.181.41.14 () {56 vars in 1163 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/js/cookie.js?_=2022.3.1 => generated 524 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/75] 220.181.41.14 () {56 vars in 1167 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/theme/theme.js?_=2022.3.1 => generated 4274 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/76] 220.181.41.14 () {56 vars in 1175 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/waves/waves.min.js?_=2022.3.1 => generated 6329 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/77] 220.181.41.14 () {56 vars in 1159 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/js/menu.js?_=2022.3.1 => generated 1189 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/78] 220.181.41.14 () {56 vars in 1161 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/js/index.js?_=2022.3.1 => generated 21291 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/79] 220.181.41.14 () {56 vars in 1202 bytes} [Tue Sep 19 17:26:39 2023] GET /static/admin/simpleui-x/img/logo.png => generated 1126734 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 115 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/80] 220.181.41.14 () {58 vars in 1298 bytes} [Tue Sep 19 17:26:57 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff => generated 28200 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/81] 220.181.41.14 () {58 vars in 1325 bytes} [Tue Sep 19 17:26:57 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/82] 220.181.41.14 () {58 vars in 1327 bytes} [Tue Sep 19 17:26:57 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-brands-400.woff2 => generated 74768 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 2)
+Not Found: /favicon.ico
+[2023-09-19 17:26:57,602] [WARNING] [log.py 30 line] Not Found: /favicon.ico
+[pid: 179084|app: 0|req: 18/83] 220.181.41.14 () {56 vars in 1152 bytes} [Tue Sep 19 17:26:57 2023] GET /favicon.ico => generated 7412 bytes in 9 msecs (HTTP/1.1 404) 6 headers in 191 bytes (1 switches on core 1)
+[pid: 179084|app: 0|req: 19/84] 220.181.41.14 () {60 vars in 1295 bytes} [Tue Sep 19 17:27:02 2023] GET /Assets/assettask => generated 0 bytes in 4 msecs (HTTP/1.1 301) 9 headers in 353 bytes (1 switches on core 0)
+[pid: 179084|app: 0|req: 20/85] 220.181.41.14 () {60 vars in 1297 bytes} [Tue Sep 19 17:27:02 2023] GET /Assets/assettask/ => generated 35226 bytes in 26 msecs (HTTP/1.1 200) 9 headers in 480 bytes (1 switches on core 3)
+[pid: 179084|app: -1|req: -1/86] 220.181.41.14 () {56 vars in 1233 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/css/all.min.css => generated 55111 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/87] 220.181.41.14 () {56 vars in 1211 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/index.css => generated 238628 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/88] 220.181.41.14 () {56 vars in 1182 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/js/vue.min.js?_=2022.3.1 => generated 93675 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/89] 220.181.41.14 () {56 vars in 1184 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/css/base.css?_=2.7 => generated 4157 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/91] 220.181.41.14 () {56 vars in 1162 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/css/base.css?_=2.7 => generated 19513 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/91] 220.181.41.14 () {56 vars in 1185 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/theme/simpleui.css => generated 4270 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/92] 220.181.41.14 () {56 vars in 1186 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/css/changelists.css?_=20180905 => generated 6932 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 111 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/93] 220.181.41.14 () {56 vars in 1184 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/css/responsive.css?_=20180905 => generated 18545 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/94] 220.181.41.14 () {56 vars in 1192 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/elementui/index.js?_=2022.3.1 => generated 586253 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/95] 220.181.41.14 () {56 vars in 1178 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/js/language.js?_=2.1.2 => generated 189 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/96] 220.181.41.14 () {56 vars in 1180 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 => generated 811 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/97] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/locale/zh-hans.js => generated 1254 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/98] 220.181.41.14 () {56 vars in 1159 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/js/cookie.js => generated 524 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 3)
+[pid: 179084|app: 0|req: 21/99] 220.181.41.14 () {56 vars in 1113 bytes} [Tue Sep 19 17:27:03 2023] GET /admin/jsi18n/ => generated 8398 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 1)
+[pid: 179084|app: -1|req: -1/100] 220.181.41.14 () {56 vars in 1165 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/vendor/jquery/jquery.js => generated 288580 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/101] 220.181.41.14 () {56 vars in 1147 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/jquery.init.js => generated 347 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 117 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/102] 220.181.41.14 () {56 vars in 1167 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/css/fonts.css => generated 423 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 110 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/103] 220.181.41.14 () {56 vars in 1133 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/core.js => generated 5698 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/104] 220.181.41.14 () {56 vars in 1177 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/admin/RelatedObjectLookups.js => generated 5984 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/105] 220.181.41.14 () {56 vars in 1139 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/actions.js => generated 7872 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/106] 220.181.41.14 () {56 vars in 1137 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/urlify.js => generated 7902 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/107] 220.181.41.14 () {56 vars in 1147 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/prepopulate.js => generated 1531 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/108] 220.181.41.14 () {56 vars in 1169 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/vendor/xregexp/xregexp.js => generated 232381 bytes in 7 msecs via sendfile() (HTTP/1.1 200) 3 headers in 120 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/109] 220.181.41.14 () {56 vars in 1173 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/js/vendor/jquery/jquery.min.js => generated 89501 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/110] 220.181.41.14 () {56 vars in 1171 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/automatic/dicts.js => generated 6292 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 3)
+[pid: 179084|app: -1|req: -1/111] 220.181.41.14 () {56 vars in 1175 bytes} [Tue Sep 19 17:27:03 2023] GET /static/admin/simpleui-x/automatic/segment.js => generated 1186 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 118 bytes (0 switches on core 1)
+[pid: 179084|app: -1|req: -1/112] 220.181.41.14 () {56 vars in 1165 bytes} [Tue Sep 19 17:27:04 2023] GET /static/admin/simpleui-x/js/axios.min.js => generated 14237 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 119 bytes (0 switches on core 0)
+[pid: 179084|app: 0|req: 22/113] 220.181.41.14 () {60 vars in 1355 bytes} [Tue Sep 19 17:27:09 2023] GET /VulnerabilityMonitor/vulnerbilitymonitorresult => generated 0 bytes in 4 msecs (HTTP/1.1 301) 9 headers in 383 bytes (1 switches on core 2)
+[pid: 179084|app: 0|req: 23/114] 220.181.41.14 () {60 vars in 1357 bytes} [Tue Sep 19 17:27:09 2023] GET /VulnerabilityMonitor/vulnerbilitymonitorresult/ => generated 53666 bytes in 61 msecs (HTTP/1.1 200) 9 headers in 480 bytes (1 switches on core 3)
+[pid: 179084|app: 0|req: 24/115] 220.181.41.14 () {56 vars in 1143 bytes} [Tue Sep 19 17:27:09 2023] GET /admin/jsi18n/ => generated 8398 bytes in 4 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 1)
+[pid: 179084|app: -1|req: -1/116] 220.181.41.14 () {58 vars in 1221 bytes} [Tue Sep 19 17:27:09 2023] GET /static/admin/fonts/Roboto-Regular-webfont.woff => generated 85876 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 0)
+[pid: 179084|app: -1|req: -1/117] 220.181.41.14 () {58 vars in 1298 bytes} [Tue Sep 19 17:27:09 2023] GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff => generated 28200 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 2)
+[pid: 179084|app: -1|req: -1/118] 220.181.41.14 () {58 vars in 1215 bytes} [Tue Sep 19 17:27:09 2023] GET /static/admin/fonts/Roboto-Bold-webfont.woff => generated 86184 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 3 headers in 113 bytes (0 switches on core 3)
+[pid: 179084|app: 0|req: 25/119] 220.181.41.14 () {60 vars in 1353 bytes} [Tue Sep 19 17:27:13 2023] GET /VulnerabilityMonitor/vulnerabilitymonitortask => generated 0 bytes in 4 msecs (HTTP/1.1 301) 9 headers in 382 bytes (1 switches on core 1)
+[pid: 179084|app: 0|req: 26/120] 220.181.41.14 () {60 vars in 1355 bytes} [Tue Sep 19 17:27:13 2023] GET /VulnerabilityMonitor/vulnerabilitymonitortask/ => generated 36563 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 480 bytes (1 switches on core 0)
+[pid: 179084|app: -1|req: -1/121] 220.181.41.14 () {56 vars in 1191 bytes} [Tue Sep 19 17:27:13 2023] GET /static/admin/css/base.css?_=2.7 => generated 19513 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 112 bytes (0 switches on core 3)
+[pid: 179084|app: 0|req: 27/122] 220.181.41.14 () {56 vars in 1142 bytes} [Tue Sep 19 17:27:13 2023] GET /admin/jsi18n/ => generated 8398 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 2)
+[pid: 179084|app: -1|req: -1/123] 220.181.41.14 () {58 vars in 1325 bytes} [Tue Sep 19 17:27:13 2023] GET /static/admin/simpleui-x/fontawesome-free-5.8.1-web/webfonts/fa-solid-900.woff2 => generated 74256 bytes in 0 msecs via sendfile() (HTTP/1.1 200) 3 headers in 114 bytes (0 switches on core 3)
+[uwsgi-python-reloader] module/file /root/SecGithubProject/ApolloScanner/./ApolloScanner/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 179084)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/SecGithubProject/ApolloScanner
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (127.0.0.1:8443)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./uwsgi.ini
+[uwsgi-static] added mapping for /static => /root/SecGithubProject/ApolloScanner/static
+*** Starting uWSGI 2.0.22 (64bit) on [Tue Sep 19 17:34:58 2023] ***
+compiled with version: 11.4.0 on 15 September 2023 02:22:15
+os: Linux-5.15.0-83-generic #92-Ubuntu SMP Mon Aug 14 09:30:42 UTC 2023
+nodename: ecs-299104
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root/SecGithubProject/ApolloScanner
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/SecGithubProject/ApolloScanner
+your processes number limit is 14425
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+building mime-types dictionary from file /etc/mime.types...1516 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:8443 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Python main interpreter initialized at 0x55c141acd500
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208576 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c141acd500 pid: 179083 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 179083)
+spawned uWSGI worker 1 (pid: 180172, cores: 4)
+Python auto-reloader enabled

@@ -4,6 +4,12 @@
 <img width="1434" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/b815ec72-6aeb-44e2-ac2b-e2b31d7f54c4">
 <img width="1432" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/367eea48-edf1-4130-89a4-7796efb3ba8f">
 
+```bash
+python3 manage.py crontab add # 添加计划任务
+python3 manage.py crontab show # 查看计划任务
+```
+
+
 ## 2023.09.12 
 + 优化显示逻辑
 ## 2023.09.11
