@@ -2,7 +2,8 @@
 ## 2023.09.14 
 + 增加新功能，可以支持根据关键字监控Github上面新的漏洞POC/EXP
 <img width="1434" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/b815ec72-6aeb-44e2-ac2b-e2b31d7f54c4">
-<img width="1432" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/367eea48-edf1-4130-89a4-7796efb3ba8f">
+![image](https://github.com/b0bac/ApolloScanner/assets/11972644/315f8ef1-5649-483c-b40e-d0b31dd987e7)
+
 
 ```bash
 python3 manage.py crontab add # 添加计划任务
@@ -20,7 +21,6 @@ python3 manage.py crontab show # 查看计划任务
 
 
 # 通知
-**由于两位开发者处于生病或工作忙碌状态的情况，ApolloScanner将在短期内暂停更新和修复BUG，预计清明节后继续。**
 
 **请因缺少依赖库、依赖库版本不对、缺少组件、数据库账号口令与配置文件不同等引发的报错的使用者，先自行Google解决。**
 
