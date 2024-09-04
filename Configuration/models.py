@@ -87,3 +87,77 @@ class ServicesLog(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class Worker(models.Model):
+    id = models.AutoField(primary_key=True, db_column="id", verbose_name='序号')
+    name = models.CharField(max_length=20, db_column="name", verbose_name='员工姓名', editable=True)
+    worker_id = models.CharField(max_length=10, db_column="worker_id", verbose_name="员工工号", editable=True)
+    gender_choice = (("0", "女"), ("1", "男"))
+    gender = models.CharField(max_length=2, db_column="gender", choices=gender_choice, verbose_name='性别', editable=True)
+    department = models.CharField(max_length=20, db_column="department", verbose_name='所在部门', editable=True)
+    
+    def __str__(self):
+        return self.name
+
+    def change(self):
+        btn_str = '<a class="btn btn-xs btn-danger" href="{}">' \
+                  '<input name="编辑"' \
+                  'type="button" id="passButton" ' \
+                  'title="passButton" value="编辑">' \
+                  '</a>'
+        return format_html(btn_str, '%s/change' % self.id)
+
+    change.short_description = '员工编辑'
+
+    class Meta:
+        verbose_name = '员工配置'
+        verbose_name_plural = verbose_name
+
+
+class DutyTable(models.Model):
+    id = models.AutoField(primary_key=True, db_column="id", verbose_name='序号')
+    worker = models.ForeignKey(Worker, verbose_name="值班人", on_delete=models.SET_NULL, default=None, null=True)
+    date = models.DateField(db_column="date", verbose_name='值班时间')
+    weekday_choices = (
+        ("0", "周一"),
+        ("1", "周二"),
+        ("2", "周三"),
+        ("3", "周四"),
+        ("4", "周五"),
+        ("5", "周六"),
+        ("6", "周日")
+    ) 
+    weekday = models.CharField(max_length=2, choices=weekday_choices, verbose_name='星期', default="0")
+    overtime_choices = (
+            ("0", "周末值班"), 
+            ("1", "元旦值班"), 
+            ("2", "春节值班"), 
+            ("3", "清明值班"),
+            ("4", "五一值班"),
+            ("5", "端午值班"),
+            ("6", "中秋值班"),
+            ("7", "国庆值班"),
+            ("8", "护网值班"),
+            ("9", "日常值班")
+    )
+    overtime_type = models.CharField(max_length=2, choices=overtime_choices, verbose_name='值班类型', default="9")
+    work_type_choices = (("0", "现场"), ("1", "远程"))
+    work_type = models.CharField(max_length=2, choices=work_type_choices, verbose_name='值班方式', default="0")
+
+    def __str__(self):
+        return "%s 排班" % str(self.date)
+
+    def change(self):
+        btn_str = '<a class="btn btn-xs btn-danger" href="{}">' \
+                  '<input name="编辑"' \
+                  'type="button" id="passButton" ' \
+                  'title="passButton" value="编辑">' \
+                  '</a>'
+        return format_html(btn_str, '%s/change' % self.id)
+
+    change.short_description = '排班编辑'
+
+    class Meta:
+        verbose_name = "值班表"
+        verbose_name_plural = verbose_name

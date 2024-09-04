@@ -1,8 +1,8 @@
 import threading
 from django.db import transaction
 from django.contrib import admin, messages
-from Configuration.views import service_start, service_stop
-from Configuration.models import Configuration, Services, ServicesLog
+from Configuration.views import service_start, service_stop, init_year
+from Configuration.models import Configuration, Services, ServicesLog, DutyTable, Worker
 
 # Register your models here.
 admin.site.site_header = '阿波罗自动化攻击评估系统'  # 设置header
@@ -77,3 +77,31 @@ class ServicesLogAdmin(admin.ModelAdmin):
 
     def has_change_permission(self, request, obj=None):
         return False
+
+
+@admin.register(DutyTable)
+class DutyTableAdmin(admin.ModelAdmin):
+    list_display = ['date', "worker", 'weekday', 'overtime_type', 'work_type']
+    list_filter = ['overtime_type',  ]
+    search_fields = ['worker', 'date']
+    ordering = ["date"]
+
+    def has_add_permission(self, request):
+        return True
+
+    def has_change_permission(self, request, obj=None):
+        return True
+
+
+@admin.register(Worker)
+class WorkerAdmin(admin.ModelAdmin):
+    list_display = ['name', 'worker_id', "department", "gender"]
+    list_filter = ["gender"]
+    search_fields = ['department', 'worker_id']
+    ordering = ["id"]
+
+    def has_add_permission(self, request):
+        return True
+
+    def has_change_permission(self, request, obj=None):
+        return True

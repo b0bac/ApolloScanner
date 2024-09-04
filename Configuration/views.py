@@ -1,7 +1,9 @@
 import struct
+import datetime
+import chinese_calendar
 import http.server
 import socketserver
-from Configuration.models import Configuration, Services, ServicesLog
+from Configuration.models import Configuration, Services, ServicesLog, DutyTable
 
 
 http_server = None
@@ -227,3 +229,60 @@ def service_stop(service_id):
             print(exception)
             pass
     Services.objects.filter(id=service_id).update(state=False)
+
+
+def init_year():
+    today = datetime.date.today()
+    year = str(today).split("-")[0]
+    print(year)
+    start_date = datetime.datetime(int(year), 1, 1)
+    end_date = datetime.datetime(int(year), 12, 31)
+    print(start_date)
+    print(end_date)
+    try:
+        result = DutyTable.objects.filter(date__range=(start_date,end_date))
+    except Exception as reason:
+        print(reason)
+    print("b")
+    count = result.count()
+    print(count)
+    if count > 0:
+        return 
+    current = start_date
+    translate_dictionary: dict = {
+	"New Year's Day": "1",
+	"Spring Festival": "2",
+	"Tomb-sweeping Day": "3",
+	"Labour Day": "4",
+	"Dragon Boat Festival": "5",
+	"Mid-autumn Festival": "6",
+	"National Day": "7"
+    }
+    print("Begin")
+    while current < end_date:
+        print(current)
+        detail = chinese_calendar.get_holiday_detail(current)
+        print(detail)
+        overtime_string = translate_dictionary.get(detail[1]) if detail[1] is not None else "0"
+        if overtime_string == "0" and str(current.weekday()) not in ["5", "6"]:
+            overtime_string = "9"
+        print("overtime:" + overtime_string)
+        work_type = "1" if detail[1] is not None else "0"
+        print("work_type:" + work_type)
+        day = {
+            "date": current.date(),
+            "weekday": str(current.weekday()),
+            "overtime_type": overtime_string,
+            "work_type": work_type
+        }
+        print(day)
+        try:
+            DutyTable.objects.create(**day)
+        except Exception as error:
+            print(error)
+        print("GoGoGo")
+        current += datetime.timedelta(days=1)
+        print("OK")
+
+if __name__ == "__main__":
+    init_year()

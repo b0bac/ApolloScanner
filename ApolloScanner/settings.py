@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'VulnerableScan',
     'VulnerabilityMonitor',
     'simpleui',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -49,6 +48,9 @@ INSTALLED_APPS = [
     'django_crontab',
     'django_extensions',
     'werkzeug_debugger_runserver',
+    # 'multi_captcha_admin',
+    'django.contrib.admin',
+    # 'captcha',
 ]
 
 MIDDLEWARE = [
@@ -137,6 +139,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# MULTI_CAPTCHA_ADMIN = { 'engine': 'simple-captcha', }
 
 SIMPLEUI_CONFIG = {
     # 是否使用系统默认菜单，自定义菜单时建议关闭。
@@ -179,7 +182,17 @@ SIMPLEUI_CONFIG = {
                     'name': '系统配置',
                     'icon': 'fa fa-cog',
                     'url': 'Configuration/configuration/'
-                }
+                },
+                { 
+                    'name': '员工管理',
+                    'icon': 'fa fa-user',
+                    'url': 'Configuration/worker/'
+                },
+                { 
+                    'name': '值班管理',
+                    'icon': 'fa fa-calendar',
+                    'url': 'Configuration/dutytable/'
+                },
             ]
         },
         {
@@ -287,4 +300,5 @@ SIMPLEUI_CONFIG = {
 }
 CRONJOBS = [ # 注意：/tmp/base_api 目录要手动创建
     ('30 18 * * *', 'VulnerabilityMonitor.views.start', ' >> /root/mlog/Monitor.log'),
+    ('42 15 * * *', 'Configuration.views.init_year', ' >> /root/mlog/overtime.log'),
 ]
