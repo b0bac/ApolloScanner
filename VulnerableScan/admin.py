@@ -3,6 +3,7 @@ from django.db import transaction
 from django.contrib import admin, messages
 from ApolloScanner.dingtalk import dingtalker
 from Configuration.models import Configuration
+from import_export.admin import ImportExportModelAdmin
 from VulnerableScan.views import start_scan, debug
 from VulnerableScan.models import VulnerableScanTasks, ExploitRegister, VulnerableScanResult
 
@@ -79,7 +80,7 @@ class VulnerableScanTasksAdmin(admin.ModelAdmin):
 
 
 @admin.register(VulnerableScanResult)
-class VulnerableScanResultAdmin(admin.ModelAdmin):
+class VulnerableScanResultAdmin(ImportExportModelAdmin):
     list_display = ['task_id', 'task_name', 'ip_address', 'port', 'result_flag', 'timestamp', 'detail']
     list_filter = ['result_flag', 'timestamp']
     search_fields = ['task_name', 'timestamp']

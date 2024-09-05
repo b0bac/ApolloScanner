@@ -4,7 +4,7 @@ from django.contrib import admin, messages
 from Assets.views import assets_scan, detail
 from Assets.models import AssetTask, AssetList
 from Configuration.models import Configuration
-
+from import_export.admin import ImportExportModelAdmin
 
 # Register your models here.
 admin.site.site_header = '阿波罗自动化攻击评估系统'  # 设置header
@@ -50,7 +50,7 @@ class AssetTaskAdmin(admin.ModelAdmin):
 
 
 @admin.register(AssetList)
-class AssetListAdmin(admin.ModelAdmin):
+class AssetListAdmin(ImportExportModelAdmin):
     list_display = ['ip_address', 'top_level_domain', 'subdomain', 'cname', 'system', 'port', 'state', 'protocol', 'service',
                     'software', 'version', 'middle_ware', 'timestamp', 'change']
     list_filter = ['ip_address', 'top_level_domain', 'system', 'port', 'state', 'protocol', 'service', 'software',

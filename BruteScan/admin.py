@@ -3,6 +3,7 @@ from django.db import transaction
 from django.contrib import admin, messages
 from BruteScan.views import start_scan, debug
 from ApolloScanner.dingtalk import dingtalker
+from import_export.admin import ImportExportModelAdmin
 from Configuration.models import Configuration
 from BruteScan.models import BruteRegister, BruteTasks, BruteResult
 
@@ -79,7 +80,7 @@ class BruteTasksAdmin(admin.ModelAdmin):
 
 
 @admin.register(BruteResult)
-class BruteResultAdmin(admin.ModelAdmin):
+class BruteResultAdmin(ImportExportModelAdmin):
     list_display = ['task_id', 'task_name', 'ip_address', 'port', 'username', 'password', 'timestamp', 'detail']
     list_filter = ['timestamp']
     search_fields = ['task_name', 'timestamp']

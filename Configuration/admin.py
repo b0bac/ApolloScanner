@@ -1,6 +1,7 @@
 import threading
 from django.db import transaction
 from django.contrib import admin, messages
+from import_export.admin import ImportExportModelAdmin
 from Configuration.views import service_start, service_stop, init_year
 from Configuration.models import Configuration, Services, ServicesLog, DutyTable, Worker
 
@@ -10,7 +11,7 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 
 @admin.register(Configuration)
-class ConfigAdmin(admin.ModelAdmin):
+class ConfigAdmin(ImportExportModelAdmin):
     list_display = ['name', 'user', 'value', 'count', 'port', 'ipaddress', 'domain', 'change']
     list_filter = ['name', ]
     search_fields = ['name', 'user']
@@ -66,7 +67,7 @@ class ServicesAdmin(admin.ModelAdmin):
 
 
 @admin.register(ServicesLog)
-class ServicesLogAdmin(admin.ModelAdmin):
+class ServicesLogAdmin(ImportExportModelAdmin):
     list_display = ['id', 'name', 'ip_address', 'method', 'status', 'message', 'timestamp']
     list_filter = ['name', 'method', 'status', ]
     search_fields = ['ip_address', 'message']
@@ -80,7 +81,7 @@ class ServicesLogAdmin(admin.ModelAdmin):
 
 
 @admin.register(DutyTable)
-class DutyTableAdmin(admin.ModelAdmin):
+class DutyTableAdmin(ImportExportModelAdmin):
     list_display = ['date', "worker", 'weekday', 'overtime_type', 'work_type']
     list_filter = ['overtime_type',  ]
     search_fields = ['worker', 'date']
@@ -94,7 +95,7 @@ class DutyTableAdmin(admin.ModelAdmin):
 
 
 @admin.register(Worker)
-class WorkerAdmin(admin.ModelAdmin):
+class WorkerAdmin(ImportExportModelAdmin):
     list_display = ['name', 'worker_id', "department", "gender"]
     list_filter = ["gender"]
     search_fields = ['department', 'worker_id']

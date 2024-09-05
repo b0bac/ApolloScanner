@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'werkzeug_debugger_runserver',
     # 'multi_captcha_admin',
     'django.contrib.admin',
+    'import_export'
     # 'captcha',
 ]
 

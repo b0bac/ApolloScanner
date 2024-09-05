@@ -2,6 +2,7 @@ import threading
 from PathScan.views import start_scan
 from django.db import transaction
 from django.contrib import admin, messages
+from import_export.admin import ImportExportModelAdmin
 from PathScan.models import PathScanTask, PathScanResult
 
 # Register your models here.
@@ -41,7 +42,7 @@ class PathScanTaskAdmin(admin.ModelAdmin):
 
 
 @admin.register(PathScanResult)
-class PathScanResultAdmin(admin.ModelAdmin):
+class PathScanResultAdmin(ImportExportModelAdmin):
     list_display = ['url', 'timestamp', 'change']
     list_filter = []
     search_fields = ['name']

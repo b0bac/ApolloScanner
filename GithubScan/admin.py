@@ -2,6 +2,7 @@ import threading
 from GithubScan.views import start_scan
 from django.db import transaction
 from django.contrib import admin, messages
+from import_export.admin import ImportExportModelAdmin
 from Configuration.models import Configuration
 from GithubScan.models import GithubScanTask, GithubScanResult
 
@@ -47,7 +48,7 @@ class GithubScanTaskAdmin(admin.ModelAdmin):
 
 
 @admin.register(GithubScanResult)
-class GithubScanResultAdmin(admin.ModelAdmin):
+class GithubScanResultAdmin(ImportExportModelAdmin):
     list_display = ['name', 'keyword', 'domain', 'url', 'timestamp', 'change']
     list_filter = ['keyword', 'domain']
     search_fields = ['name', 'keyword', 'domain']
