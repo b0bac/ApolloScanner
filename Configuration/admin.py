@@ -12,7 +12,7 @@ admin.site.site_title = '阿波罗自动化攻击评估系统'  # 设置title
 
 @admin.register(Configuration)
 class ConfigAdmin(ImportExportModelAdmin):
-    list_display = ['name', 'user', 'value', 'count', 'port', 'ipaddress', 'domain', 'change']
+    list_display = ['name', 'user', 'value', 'count', 'port', 'ipaddress', 'domain', 'nuclei', 'change']
     list_filter = ['name', ]
     search_fields = ['name', 'user']
     ordering = ["id"]
