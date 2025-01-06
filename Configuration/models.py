@@ -15,7 +15,8 @@ class Configuration(models.Model):
         ("7", "系统地址"),
         ("8", "系统域名"),
         ("9", "常用端口"),
-        ("10", "关键端口")
+        ("10", "关键端口"),
+        ("11", "Nuclei路径")
     )
     name = models.CharField(unique=True, max_length=2, choices=name_choices, verbose_name='配置名称')
     user = models.CharField(db_column="user", max_length=128, verbose_name='用户名', null=True, blank=True)
@@ -24,7 +25,8 @@ class Configuration(models.Model):
     ipaddress = models.GenericIPAddressField(db_column="ipaddress", verbose_name='系统地址', null=True, blank=True, default="127.0.0.1")
     domain = models.CharField(db_column="domain", max_length=256, verbose_name='系统域名', default="apollo.local", null=True, blank=True)
     count = models.IntegerField(db_column="count", verbose_name='配置值', default=10, null=True, blank=True)
-
+    nuclei = models.CharField(db_column="nuclei", max_length=256, verbose_name="Nuclei路径", null=True, blank=True)
+    
     def __str__(self):
         for item in self.name_choices:
             if self.name == item[0]:
