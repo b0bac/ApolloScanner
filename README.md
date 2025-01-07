@@ -8,7 +8,6 @@
 
 + 支持Nuclei扫描，可以按需配置yaml poc（支持调试），并进行扫描，当前扫描结果验证不稳定，还在优化中，Nuclei使用方法与自定义EXP扫描基本相同
 <img width="1473" alt="image" src="https://github.com/user-attachments/assets/ab96a768-bf57-4464-bad4-595732c69055" />
-<img width="1488" alt="image" src="https://github.com/user-attachments/assets/75c5d3bc-bb45-4bf6-9cce-20e0d476266a" />
 <img width="1476" alt="image" src="https://github.com/user-attachments/assets/63fea92f-4160-4066-a177-b179ea9e52bb" />
 <img width="1494" alt="image" src="https://github.com/user-attachments/assets/a60fb669-5ed5-4337-942e-7fc362b8874a" />
 <img width="1716" alt="image" src="https://github.com/user-attachments/assets/4332f226-57cd-4954-84a7-3188e7c9e698" />
