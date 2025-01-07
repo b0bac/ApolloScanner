@@ -8,7 +8,7 @@
 <img width="1488" alt="image" src="https://github.com/user-attachments/assets/75c5d3bc-bb45-4bf6-9cce-20e0d476266a" />
 <img width="1476" alt="image" src="https://github.com/user-attachments/assets/63fea92f-4160-4066-a177-b179ea9e52bb" />
 <img width="1494" alt="image" src="https://github.com/user-attachments/assets/a60fb669-5ed5-4337-942e-7fc362b8874a" />
-<img width="1479" alt="image" src="https://github.com/user-attachments/assets/76e669d5-3b8c-4e1d-91b2-acc49caf7688" />
+<img width="1716" alt="image" src="https://github.com/user-attachments/assets/4332f226-57cd-4954-84a7-3188e7c9e698" />
 
 **使用前请下载nuclei（当前测试版本3.3.7）机器中，并配置路径
 <img width="1477" alt="image" src="https://github.com/user-attachments/assets/e6745fbb-2d27-4d4e-af77-0bf98be2756b" />
