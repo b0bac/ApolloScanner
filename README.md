@@ -55,30 +55,7 @@ python3 manage.py crontab show # 查看计划任务
 
 
 ## 安装
-**提供了虚拟机版本**
-+ 系统账号: apollo/apollo
-+ web访问账号: apollo/apollo
-+ 连接地址百度网盘 
-+ 链接: https://pan.baidu.com/s/164TUtMLqv8yyxfrse5VR2g 
-+ 提取码: s5ti 
-+ 格式：
-  + ova 适用于virtual box
-  + ovf（zip压缩包）适用于 vmware workstations 和 vmware fusion
-+ 使用简便  
-```bash
-cd ~/ApolloScanner
-sudo python3.8 manage.py runserver 0.0.0.0:8080
-```
-+ 虚拟机迁移可能导致的网络问题
-```bash
-sudo ifconfig -a 
-# 查看所有网卡，假设网卡为ens33
-# 调整为NAT模式
-sudo ifconfig ens33 down
-sudo ifconfig ens33 up
-```
-![图片](https://user-images.githubusercontent.com/11972644/159934652-5fef3ec7-cec9-4385-8caa-3cf8a54caf6a.png)
-
+**版本更新，不再支持虚机安装**
 **源码安装**
 + python版本： 3.8.x 或 3.9.x
 + django版本：4.0.1
