@@ -1,4 +1,18 @@
 # 最新更新
+## 2025.01.07
++ 支持导入导出功能
+<img width="1716" alt="image" src="https://github.com/user-attachments/assets/4332f226-57cd-4954-84a7-3188e7c9e698" />
+
++ 支持Nuclei扫描，可以按需配置yaml poc（支持调试），并进行扫描，当前扫描结果验证不稳定，还在优化中，Nuclei使用方法与自定义EXP扫描基本相同
+<img width="1473" alt="image" src="https://github.com/user-attachments/assets/ab96a768-bf57-4464-bad4-595732c69055" />
+<img width="1488" alt="image" src="https://github.com/user-attachments/assets/75c5d3bc-bb45-4bf6-9cce-20e0d476266a" />
+<img width="1476" alt="image" src="https://github.com/user-attachments/assets/63fea92f-4160-4066-a177-b179ea9e52bb" />
+<img width="1494" alt="image" src="https://github.com/user-attachments/assets/a60fb669-5ed5-4337-942e-7fc362b8874a" />
+<img width="1479" alt="image" src="https://github.com/user-attachments/assets/76e669d5-3b8c-4e1d-91b2-acc49caf7688" />
+
+**使用前请下载nuclei（当前测试版本3.3.7）机器中，并配置路径
+
+  
 ## 2023.09.14 
 + 增加新功能，可以支持根据关键字监控Github上面新的漏洞POC/EXP
 <img width="1434" alt="image" src="https://github.com/b0bac/ApolloScanner/assets/11972644/b815ec72-6aeb-44e2-ac2b-e2b31d7f54c4">
