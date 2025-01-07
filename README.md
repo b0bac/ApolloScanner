@@ -55,15 +55,16 @@ python3 manage.py crontab show # 查看计划任务
 
 
 ## 安装
-**版本更新，不再支持虚机安装**
-**源码安装**
+**版本更新，不再支持虚机安装,请使用源码安装，部署过程的Trouble Shooting 也是一种成长**
 + python版本： 3.8.x 或 3.9.x
 + django版本：4.0.1
 + nmap：需要
 + masscan：需要
++ nuclei：若要使用则需要，请自行下载
 + mysql
 + 前端：基于simple-ui
-+ 支持操作系统：MacOS Monterey 12.3 / Ubuntu 18.04 LTS
++ 支持操作系统：Ubuntu 20.04
++ 应该支持但未测试：MacOS 系列/ Ubuntu 系列
 
 ```python
 sudo apt install masscan nmap libmysqlclient-dev mysql-server
