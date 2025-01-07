@@ -11,6 +11,7 @@
 <img width="1479" alt="image" src="https://github.com/user-attachments/assets/76e669d5-3b8c-4e1d-91b2-acc49caf7688" />
 
 **使用前请下载nuclei（当前测试版本3.3.7）机器中，并配置路径
+<img width="1477" alt="image" src="https://github.com/user-attachments/assets/e6745fbb-2d27-4d4e-af77-0bf98be2756b" />
 
   
 ## 2023.09.14 
