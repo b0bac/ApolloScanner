@@ -52,19 +52,20 @@ class VulnerableScanTasksAdmin(admin.ModelAdmin):
 
     @transaction.atomic
     def scan(self, request, queryset):
-        if self.notice:
-            try:
-                token = Configuration.objects.filter(name="2").values_list('value')[0][0]
-                dingtalker.set_token(token)
-            except Exception as exception:
-                messages.add_message(request, messages.SUCCESS, '请配置钉钉接口Token')
-                return
         work_ids = None
         for item in request.POST.lists():
             if item[0] == "_selected_action":
                 work_ids = item[1]
         if isinstance(work_ids, list):
             for work_id in work_ids:
+                notice = VulnerableScanTasks.objects.filter(id=work_id).values_list("notice")[0][0]
+                if notice == 1:
+                    try:
+                        token = Configuration.objects.filter(name="2").values_list('value')[0][0]
+                        dingtalker.set_token(token)
+                    except Exception as exception:
+                        messages.add_message(request, messages.SUCCESS, '请配置钉钉接口Token')
+                        return
                 thread = threading.Thread(target=start_scan, args=(work_id,))
                 thread.start()
                 messages.add_message(request, messages.SUCCESS, '开始扫描%s' % str(work_id))
