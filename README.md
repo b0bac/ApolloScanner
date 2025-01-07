@@ -13,6 +13,11 @@
 **使用前请下载nuclei（当前测试版本3.3.7）机器中，并配置路径
 <img width="1477" alt="image" src="https://github.com/user-attachments/assets/e6745fbb-2d27-4d4e-af77-0bf98be2756b" />
 
++ 新增员工和排班功能
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/11d27de7-52de-46ef-8faf-998a72d3d597" />
+<img width="1702" alt="image" src="https://github.com/user-attachments/assets/2c578e75-3b0e-4d8d-b348-3b46f8bd067d" />
+
+
   
 ## 2023.09.14 
 + 增加新功能，可以支持根据关键字监控Github上面新的漏洞POC/EXP
