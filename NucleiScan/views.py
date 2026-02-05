@@ -14,7 +14,7 @@ def nuclei_scan(engine, target, templates):
         result = subprocess.Popen(command, stdout=subprocess.PIPE)
         return str(result.communicate())
     except subprocess.CalledProcessError as e:
-        return "Error occurred: {e.stderr}"
+        return f"Error occurred: {e.stderr}"
 
 def haslevel(content):
     if content.find("high") > 0:
